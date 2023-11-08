@@ -2,6 +2,7 @@ const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser");
+const path = require("path");
 require("dotenv").config();
 const { router: userRouter } = require("./routes/user");
 const { router: eventRouter } = require("./routes/event");
