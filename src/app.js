@@ -25,6 +25,11 @@ async function setup() {
   app.use('/', express.json(), userRouter);
   app.use('/', express.json(), eventRouter);
 
+  app.get('/.well-known/pki-validation/1C918F4BC388B0A10FF1A47F9818E47D.txt', (req, res) => {
+
+    res.sendFile(path.join(__dirname, '../1C918F4BC388B0A10FF1A47F9818E47D.txt'));
+  });
+
   return app;
 }
 
